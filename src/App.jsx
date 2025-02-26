@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import LineGraph from './LineGraph'
 
 function App() {
   const [dataLast2Hours, setDataLast2Hours] = useState([])
@@ -20,6 +21,9 @@ function App() {
   }, [])
 
   function checkRiverStatus(data) {
+    if (data[0].IsSwimmable === false || data[0].IsSwimmable === 0) {
+      return '*WARNING* Swimming not recommended due to contamination - check Lawa for updates'
+    }
     if (data[0].Flow > 2) {
       for (let j = 0; j < data.length; j++) {
         if (data[j].Flow < 2) {
@@ -58,22 +62,20 @@ function App() {
       </div>
       <div className="ContentBar">
         <div className='ContentCard'>
-          <div className="CardHeader">Status<br /><br />
+          <div className="CardHeader">Status</div>
+          <div className="CardValue">
             {dataLast2Hours.length === 0 ? '  Loading' : `${checkRiverStatus(dataLast2Hours)}`}
           </div>
         </div>
         <div className='ContentCard'>
-          <div className="CardHeader">Flow Rate
+          <div className="CardHeader">Power Station Outflow</div>
+          <div className="CardValue">
             {dataLast2Hours.length === 0 ? 'Loading' : `${dataLast2Hours[0].Flow} m3/s`}
           </div>
         </div>
       </div>
-      <div className="ContentBar">
-          Cool graph goes here
-      </div>
-      Cool image goes here
-      <div className="Footer">
-        <div className='FooterText'>Mangaore Stream River Data</div>
+      <div className="GraphCard">
+        {dataLast2Hours.length === 0 ? 'Loading' : LineGraph({ data: dataLast2Hours })}
       </div>
     </>
   )

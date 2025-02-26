@@ -1,8 +1,11 @@
 #root {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  width: 100%;
+  width: calc(100% - 20px);
+  margin: 0 10px;
   gap: 20px;
 }
 
@@ -28,7 +31,9 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  width: calc(100% - 10px);
   margin: 0 20px;
+  gap: 10px;
 }
 
 .ContentCard  {
@@ -39,7 +44,41 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  width: 50%;
+  width: calc(50% - 20px);
   flex-grow: 0;
   flex-shrink: 0;
+  padding: 10px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.GraphCard {
+  background: rgba(255, 255, 255, 0.1);
+  height: 40vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CardHeader {
+  font-size: calc(5px + 1vmin);
+  font-weight: 300;
+  color: #e2e2e2;
+  text-align: left;
+}
+
+.CardValue {
+  font-size: calc(10px + 2vmin);
+  font-weight: 500;
+  color: #e2e2e2;
 }
