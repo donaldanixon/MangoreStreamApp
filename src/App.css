@@ -6,10 +6,11 @@
   height: 100%;
   width: calc(100% - 20px);
   margin: 0 10px;
-  gap: 20px;
+  gap: 30px;
 }
 
 .Header {
+  padding-top: 20px;
   height: clamp(3rem, 10vh, 5rem);
   color: #e2e2e2;
   display: flex;
@@ -30,7 +31,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(20px + 4vmin);
   width: calc(100% - 10px);
   margin: 0 20px;
   gap: 10px;
@@ -78,7 +79,52 @@
 }
 
 .CardValue {
-  font-size: calc(10px + 2vmin);
+  padding-top:10px;
+  font-size: calc(15px + 2vmin);
   font-weight: 500;
   color: #e2e2e2;
+}
+
+.GiantNumber {
+  font-size: calc(30px + 6vmin);
+}
+
+.GraphCard {
+  font-size: calc(5px + 1vmin);
+  font-weight: 300;
+  color: #e2e2e2;
+  text-align: left;
+}
+
+.Footer {
+  height: max-content;
+  color: #e2e2e2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: calc(100% - 20px);
+  left: 10px
+}
+
+.FooterText {
+  font-size: calc(5px + 1vmin);
+  font-weight: 300;
+  color: #e2e2e2;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.FooterDisclaimer {
+  font-size: calc(5px + 2vmin);
+  font-weight: 500;
+  color: #e2e2e2;
+  text-align: center;
+}
+
+a {
+  color: #e2e2e2;
+  font-style: italic;
+  text-decoration: none;
 }

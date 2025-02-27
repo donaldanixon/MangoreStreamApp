@@ -8,12 +8,18 @@
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
-  background-color: #181818;
 }
+
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
   max-height: 100vh;
+  background-color: RGBA(22, 22, 22, 1);
+  background-image: linear-gradient(to right, RGBA(22, 22, 22, var(--opacity)), RGBA(22, 22, 22, var(--opacity))), url(./assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  --opacity: 0.8;
 }

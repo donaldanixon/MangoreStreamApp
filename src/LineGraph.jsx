@@ -20,8 +20,8 @@ const LineGraph = ({ data }) => {
                 label: 'Dam Outflow',
                 data: flowData,
                 fill: false,
-                backgroundColor: 'rgba(75,192,192,0.4)',
-                borderColor: 'rgba(75,192,192,1)',
+                backgroundColor: 'rgba(75,192,192,0)',
+                borderColor: 'rgba(233,233,233,1)',
             },
         ],
     };
